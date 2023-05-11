@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login</title>
+
+	<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+
+	<script src="/vendor/jquery/jquery-3.6.3.min.js"></script>
+	<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/vendor/fontawesome/js/all.min.js"></script>
+
+	<style type="text/css">
+		html,
+		body {
+			height: 100%;
+			width: 100%;
+			margin: 0;
+		}
+
+		body {
+			display: flex;
+		}
+
+		form,
+		h2 {
+			margin: auto;
+			/* nice thing of auto margin if display:flex; it center both horizontal and vertical :) */
+		}
+
+		#login-btn {
+			text-align: center;
+		}
+
+		#register-account {
+			padding: 2px;
+			text-align: center;
+		}
+
+		#email-btn {
+			position: relative;
+			left: 315px;
+		}
+
+		#single-btn {
+			position: relative;
+			left: 380px;
+		}
+	</style>
+</head>
+
+<body>
+	<form action="javascript:login()">
+		<h2 class="m-5">Login form</h2>
+		<div class="form-group">
+			<label for="email">Email:</label> <input type="email" class="form-control" id="email"
+				placeholder="Enter email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Password:</label> <input type="password" class="form-control" id="pwd"
+				placeholder="Enter password" name="pswd">
+		</div>
+		<button id="login-btn" type="Login" class="form-control btn btn-primary">Log In</button>
+		<hr>
+		<div name="register">
+			<p id="register-account">Gaada akun? <a onclick="regisEmail()" href="#">Buatlah</a></p>
+		</div>
+		<hr>
+	</form>
+
+	<!-- Modal, untuk memunculkan Pop Up Window-->
+	<div class="modal" tabindex="-1" id="modalRegisEmail">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Your Title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<i class="fa fa-close"></i>
+					</button>
+				</div>
+				<div class="modal-body">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

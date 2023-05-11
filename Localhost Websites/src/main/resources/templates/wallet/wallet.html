@@ -1,0 +1,150 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nominal Dompet Elektronik</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+
+<script src="/vendor/jquery/jquery-3.6.3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="/vendor/fontawesome/js/all.min.js"></script>
+
+</head>
+<body>
+	<!-- Header -->
+	<header class="container-fluid p-5 bg-dark text-white">
+		<h1>Electronic Nominal Wallet Page</h1>
+	</header>
+
+	<!-- Breadcrumb Navigation -->
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item"><a href="#">Kurir</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Wallet</li>
+		</ol>
+	</nav>
+
+	<!-- Main Page -->
+	<section class="container">
+		<!-- Searchbar & Add Button -->
+		<div class="row p-3">
+			<div class="input-group col-sm-9">
+				<input class="form-control border-end-0 border rounded-pill"
+					type="text" placeholder="search nominal" id="example-search-input">
+				<span class="input-group-append">
+					<button
+						class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3"
+						type="button" id="btn-search">
+						<i class="fa fa-search"></i>
+					</button>
+				</span>
+			</div>
+			<div class="col-sm-3 text-right">
+				<button id="content-add-button" class="btn btn-primary"
+					onclick="bukaPopupAdd()">Add Nominal</button>
+			</div>
+		</div>
+
+		<!-- Table -->
+		<table class="table table-bordered">
+			<thead>
+				<!-- Baris Header -->
+				<tr class="bg-primary">
+					<!-- kolom -->
+					<th style="text-align: center">Nominal</th>
+					<th style="text-align: center">Action</th>
+				</tr>
+			</thead>
+			<!-- Baris Kontennya -->
+			<tbody id="content-tbody">
+				<tr>
+					<td>MANCO</td>
+					<td>
+						<button class="btn btn-warning"
+							onclick="bukaPopupEdit('MANCO','Main Course',true)">
+							<i class="fa-solid fa-pen-to-square" color="white"></i>
+						</button>
+						<button class="btn btn-danger"
+							onclick="bukaPopupDelete('MANCO','Main Course',true)">
+							<i class="fa-solid fa-trash" color="white"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>SATE</td>
+					<td>
+						<button class="btn btn-warning"
+							onclick="bukaPopupEdit('SATE','Sate',false)">
+							<i class="fa-solid fa-pen-to-square" color="white"></i>
+						</button>
+						<button class="btn btn-danger"
+							onclick="bukaPopupDelete('SATE','Sate',false)">
+							<i class="fa-solid fa-trash" color="white"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>IC</td>
+					<td>
+						<button class="btn btn-warning"
+							onclick="bukaPopupEdit('IC','ICE Cream',true)">
+							<i class="fa-solid fa-pen-to-square" color="white"></i>
+						</button>
+						<button class="btn btn-danger"
+							onclick="bukaPopupDelete('IC','ICE Cream',true)">
+							<i class="fa-solid fa-trash" color="white"></i>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>CKE</td>
+					<td>
+						<button class="btn btn-warning"
+							onclick="bukaPopupEdit('CKE')">
+							<i class="fa-solid fa-pen-to-square" color="white"></i>
+						</button>
+						<button class="btn btn-danger"
+							onclick="bukaPopupDelete('CKE')">
+							<i class="fa-solid fa-trash" color="white"></i>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+
+		</table>
+		
+	</section>
+
+	<footer class="container-fluid bg-dark text-white p-5 text-center">
+		<h6>© 2023 Batch 310 - Java Spring Boot Mini Project</h6>
+	</footer>
+
+	<!-- Modal -->
+	<div class="modal" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Abcabc</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<i class="fa fa-close"></i>
+					</button>
+				</div>
+				<div class="modal-body"></div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		var userID = 1;
+	</script>
+	<script src="/wallet/get-search.js" type="text/javascript"></script>
+	<script src="/wallet/insert.js" type="text/javascript"></script>
+	<script src="/wallet/update.js" type="text/javascript"></script>
+	<script src="/wallet/delete.js" type="text/javascript"></script>
+	<script src="/wallet/search.js" type="text/javascript"></script>
+	
+</body>
+</html>
